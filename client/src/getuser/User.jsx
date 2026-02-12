@@ -23,7 +23,7 @@ const User = () => {
 
 	const deleteUser = async (userId) => {
 		await axios
-			.delete(`${BACKEND_URL}/api/delete/user/${userId}`)
+			.delete(`${BACKEND_URL}/delete/user/${userId}`)
 			.then((response) => {
 				setUsers((prevUser) => prevUser.filter((user) => user._id !== userId));
 				toast.success(response.data.message, { position: "top-right" });
