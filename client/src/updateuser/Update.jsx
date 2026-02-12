@@ -26,7 +26,7 @@ const UpdateUser = () => {
 
 	useEffect(() => {
 		axios
-			.get(`${BACKEND_URL}/api/user/${id}`)
+			.get(`${BACKEND_URL}/user/${id}`)
 			.then((response) => {
 				setUser(response.data);
 			})
